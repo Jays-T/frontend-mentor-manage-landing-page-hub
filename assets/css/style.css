@@ -20,9 +20,9 @@ body
     background-image: url(/assets/images/bg-tablet-pattern.svg),
                       url(/assets/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
-    background-position: top -12% right -2%,
-                         bottom 35% left -40%;
-    background-size: 57rem;
+    background-position: top -24% right -5%,
+                         bottom 10% left -50%;
+    background-size: 59rem;
     overflow-x: hidden;
     font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
@@ -32,11 +32,15 @@ h1
 {
     font-size: 4.6rem;
 }
-.rounded
+body section .round-radius
 {
     border-radius: 50px;
 }
-.large-btn
+body section button:focus 
+{ 
+    outline: none; 
+}
+body section .btn-style
 {
     height: 50px;
     width: 180px;
@@ -44,13 +48,13 @@ h1
     font-weight: 700;
     letter-spacing: .2rem;
 }
-.large-btn,
-.card-number
+body section .btn-style,
+body section .card-number
 {
     background-color: var(--p-bright-red);
     color: var(--n-pale-red);
 }
-.large-btn.inverted
+body section .btn-style .inverted
 {
     background-color: var(--n-pale-red);
     color: var(--p-bright-red);
@@ -93,7 +97,7 @@ section.has-navbar .navbar .navlist
     flex-direction: row;
     grid-column: 2;
 }
-section.has-navbar .navbar .large-btn
+section.has-navbar .navbar .btn-style
 {
     position: relative;
     margin-top: 26px;
@@ -120,13 +124,16 @@ section .has-header .header-right
     justify-content: flex-end;
     align-items: flex-end;
     flex-wrap: wrap;
-
     max-width: 50vw;
 }
 /* Product Info */
 section.has-product-info h2
 {
     font-size: 2rem;
+}
+section.has-header .header-left .btn-style
+{
+    margin-top: 20px;
 }
 section.has-product-info .has-product-info-left
 {
@@ -155,6 +162,7 @@ section.has-product-info .product-card .card-number
     margin-right: 40px;
     font-size: .8rem;
 }
+section.has-header .header-left .below-heading-text,
 section.has-product-info .has-product-info-left .below-heading-text,
 section.has-product-info .product-card .card-body
 {
