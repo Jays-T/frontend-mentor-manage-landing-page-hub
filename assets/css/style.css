@@ -1,3 +1,15 @@
+/* Global Classes */
+:root {
+    /* P = Primary | N = Neutral */
+
+    --p-bright-red: hsl(12, 88%, 59%);
+    --p-dark-blue: hsl(228, 39%, 23%);
+
+    --n-dark-grayish-blue: hsl(227, 12%, 61%);
+    --n-dark-blue: hsl(233, 12%, 13%);
+    --n-pale-red: hsl(13, 100%, 96%);
+    --n-light-grey: hsl(0, 0%, 98%);
+}
 *
 {
     margin: 0;
@@ -8,14 +20,33 @@ body
     background-image: url(/assets/images/bg-tablet-pattern.svg);
     background-repeat: repeat-y;
     overflow-x: hidden;
+    font-family: 'Be Vietnam', sans-serif;
+    font-size: 16px;
+    padding: 0 10%;
 }
 .rounded
 {
     border-radius: 50px;
 }
+.large-btn
+{
+    height: 50px;
+    width: 180px;
+    border: none;
+    background-color: var(--p-bright-red);
+    color: var(--n-pale-red);
+    font-weight: 700;
+    letter-spacing: .2rem;
+}
+.large-btn.inverted
+{
+    background-color: var(--n-pale-red);
+    color: var(--p-bright-red);
+}
+/* Navbar */
 .has-navbar
 {
-    padding: 40px 10%;
+    padding: 40px 0;
     max-width: 100vw;
     height: 240px;
 }
@@ -23,10 +54,14 @@ body
 {
     width: 100%;
     display: grid;
-    grid-template-columns: 20% auto 20%;
+    grid-template-columns: 30% auto 10%;
+    position: sticky;
+    top: 10px;
 }
 .has-navbar .navbar .nav-logo
 {
+    left: 0;
+    position: relative;
     display: flex;
     margin: auto;
     height: 100%;
@@ -39,9 +74,16 @@ body
 }
 .has-navbar .navbar .navlist
 {
+    position: relative;
     display: flex;
     flex-direction: row;
     grid-column: 2;
+}
+.has-navbar .navbar .large-btn
+{
+    position: relative;
+    margin-top: 22px;
+    right: 0;
 }
 .has-navbar .navbar .navlist .navitem
 {
