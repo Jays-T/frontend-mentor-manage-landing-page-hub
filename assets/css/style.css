@@ -18,8 +18,8 @@ body section p
 }
 body
 {
-    background-image: url(/assets/images/bg-tablet-pattern.svg),
-                      url(/assets/images/bg-tablet-pattern.svg);
+    background-image: url(assets/images/bg-tablet-pattern.svg),
+                      url(assets/images/bg-tablet-pattern.svg);
     background-repeat: no-repeat;
     /* 1920 w
     background-position: top -24% right -5%,
