@@ -21,10 +21,16 @@ body
     overflow-x: hidden;
     font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
+    overflow-x: hidden;
+    text-align: center;
 }
-h1
+body h1
 {
-    font-size: 4.6rem;
+    font-size: 4.2rem;
+}
+body h2
+{
+    font-size: 3.6rem;
 }
 body section .round-radius
 {
@@ -40,8 +46,8 @@ body section button:focus
 }
 body section .btn-style
 {
-    height: 50px;
-    width: 180px;
+    height: 60px;
+    width: 220px;
     border: none;
     font-weight: 700;
     letter-spacing: .2rem;
@@ -57,7 +63,7 @@ body section .btn-style .inverted
     background-color: var(--n-pale-red);
     color: var(--p-bright-red);
 }
-.container
+body .container
 {
     display: grid;
     height: calc(100%);
@@ -72,6 +78,7 @@ body section .btn-style .inverted
         "footer"
         "attribution"
     ;
+    padding: 0;
 }
 .has-navbar
 {
@@ -104,13 +111,16 @@ section.has-navbar .navbar .navlist .navitem
     display: flex;
     flex-direction: column-reverse;
 }
+.main-right
+{
+    display: flex;
+    justify-content: flex-end;
+    grid-area: main-right;
+}
 .main-left
 {
     grid-area: main-left;
-}
-.main-right
-{
-    grid-area: main-right;
+    padding: 20px;
 }
 .has-content
 {
@@ -129,11 +139,6 @@ section.has-navbar .navbar .navlist .navitem
     grid-area: content-right;
 }
 /* Product Info */
-section.has-content h2
-{
-    font-size: 2.2rem;
-    width: 80%;
-}
 section.has-content .has-content-left
 {
     padding-top: 20px;
@@ -156,17 +161,19 @@ section.has-content .product-card .card-number
 {
     justify-content: center;
     padding: 0;
-    min-width: 60px;
-    max-width: 60px;
+    min-width: 90px;
+    max-width: 90px;
+    height: 50px;
     margin-right: 40px;
-    font-size: .8rem;
+    font-size: 1.2rem;
+    font-weight: 700;
 }
-section.has-header .header-left .below-heading-text,
-section.has-content .has-content-left .below-heading-text
 
+section.has-main .main-left .below-main-text,
+section.has-content .content-left .below-main-text
 {
-    width: 60%;
-    padding-top: 20px;
+    font-size: 1.8rem;
+    padding: 20px;
 }
 section.has-content .product-card .card-body
 {
@@ -184,8 +191,10 @@ section.has-content .product-card .card-body
 }
 .footer-top
 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #5ec9ae;
     grid-area: footer-top;
 }
