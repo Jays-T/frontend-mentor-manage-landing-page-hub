@@ -67,6 +67,7 @@ body .container
 {
     display: grid;
     height: calc(100%);
+    width: 100vw;
     grid-template-columns: 1fr;
     grid-template-rows: .2fr .4fr .4fr .4fr .4fr .4fr .4fr;
     grid-template-areas: 
@@ -103,6 +104,13 @@ section.has-navbar .navbar .navlist .navitem
     margin-right: 30px;
     cursor: pointer;
 }
+body .has-navbar,
+body .has-main,
+body .has-content
+{
+    padding-left: 2%;
+    padding-right: 2%;
+}
 .has-main
 {
     background-color: #16e0e0;
@@ -114,7 +122,7 @@ section.has-navbar .navbar .navlist .navitem
 .main-right
 {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     grid-area: main-right;
 }
 .main-left
@@ -285,6 +293,7 @@ section.has-content .product-card .card-body
     }
     .main-right
     {
+        justify-content: flex-end;
         grid-area: main-right;
     }
     .has-content
