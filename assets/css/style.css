@@ -66,7 +66,7 @@ body section .btn-style
     width: 220px;
     border: none;
     font-weight: 700;
-    letter-spacing: .2rem;
+    letter-spacing: .018rem;
     margin-top: 20px;
 }
 body section .btn-color,
@@ -102,7 +102,7 @@ body .container
 {
     position: sticky;
     top: 0;
-    background-color: #ffffff;
+    background-color: transparent;
     grid-area: nav;
     z-index: 10;
 }
@@ -118,11 +118,34 @@ section.has-navbar .navbar .nav-logo
 }
 section.has-navbar .navbar .navlist
 {
-    position: relative;
+    position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
+    margin-top: 60px;
+    left: 0;
+    transform: translateX(100%);
+    width: 100%;
+    padding: 45px;
+    background-color: var(--n-light-grey);
+    font-size: 2.2rem;
+    font-weight: 500;
+    transition: .6s ease-in-out;
+}
+section.has-navbar .navbar .navlist.active
+{
+    transform: translateX(0);
+}
+section.has-navbar .navbar .navlist .navitem
+{
+    margin-top: 15px;
+    width: 100%;
+    transition: .3s ease-in-out;
+}
+section.has-navbar .navbar .navlist .navitem:hover
+{
+    background-color: var(--n-pale-red);
 }
 section.has-navbar .navbar .nav-collapsible
 {
@@ -131,6 +154,9 @@ section.has-navbar .navbar .nav-collapsible
 }
 section.has-navbar .navbar #nav-toggle
 {
+    position: absolute;
+    top: 32px;
+    right: 30px;
     display: flex;
     flex-direction: row;
     cursor: pointer;
@@ -144,7 +170,7 @@ section.has-navbar .navbar #nav-toggle
     margin: 4px;
     background-color: var(--p-bright-red);
     position: relative;
-    transition: .2s ease-in-out;
+    transition: .6s ease-in-out;
 }
 section.has-navbar .navbar #nav-toggle.active .dot-one
 {
@@ -176,9 +202,9 @@ section.has-navbar .navbar #nav-toggle.active .dot-four
 {
     opacity: .4;
 }
-section.has-navbar .navbar .navlist .navitem
+body section.has-navbar .navbar .nav-get-started
 {
-    margin-right: 30px;
+    visibility: hidden;
 }
 body ul li
 {
@@ -436,6 +462,48 @@ section.has-content .product-card .card-body
             "footer footer"
             "attribution attribution"
         ;
+    }
+    section.has-navbar .navbar #nav-toggle
+    {
+        visibility: hidden;
+    }
+    body button 
+    {
+        transition: .3s ease-in-out;
+    }
+    body button:hover
+    {
+        opacity: .9;
+        transform: scale(.95);
+    }
+    .has-navbar
+    {
+        background-color: #ffffff;
+    }
+    section.has-navbar .navbar .navlist
+    {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+        font-size: 1rem;
+        padding: 0;
+        transform: translateX(0);
+        background-color: transparent;
+        font-weight: 500;
+    }
+    section.has-navbar .navbar .navlist .navitem
+    {
+        margin-right: 15px;
+        margin-left: 15px;
+        width: 90px;
+        border-radius: 50px;
+    }
+    body section.has-navbar .navbar .nav-get-started
+    {
+        visibility: visible;
     }
     .has-main,
     .has-content
