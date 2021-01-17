@@ -19,7 +19,6 @@ body ul
 }
 body
 {
-    overflow-x: hidden;
     font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
     overflow-x: hidden;
@@ -27,7 +26,8 @@ body
 }
 body h1
 {
-    font-size: 4.2rem;
+    font-size: 3.8rem;
+    font-weight: 700;
 }
 body h2
 {
@@ -86,7 +86,7 @@ body .container
     height: calc(100%);
     width: 100vw;
     grid-template-columns: 1fr;
-    grid-template-rows: .2fr .4fr .4fr .4fr .4fr .08fr .02fr;
+    grid-template-rows: .1fr .4fr .4fr .4fr .4fr .08fr .02fr;
     grid-template-areas: 
         "nav"
         "main"
@@ -98,13 +98,14 @@ body .container
     ;
     padding: 0;
 }
-.has-navbar
+body section.has-navbar
 {
     position: sticky;
     top: 0;
     background-color: transparent;
     grid-area: nav;
     z-index: 10;
+    margin-bottom: 0;
 }
 section.has-navbar .navbar 
 {
@@ -125,8 +126,9 @@ section.has-navbar .navbar .navlist
     align-items: center;
     margin-top: 60px;
     left: 0;
-    transform: translateX(100%);
+    height: 500px;
     width: 100%;
+    transform: translateX(100%);
     padding: 45px;
     background-color: var(--n-light-grey);
     font-size: 2.2rem;
@@ -142,6 +144,7 @@ section.has-navbar .navbar .navlist .navitem
     margin-top: 15px;
     width: 100%;
     transition: .3s ease-in-out;
+    padding: 6px 10px;
 }
 section.has-navbar .navbar .navlist .navitem:hover
 {
@@ -476,10 +479,12 @@ section.has-content .product-card .card-body
         opacity: .9;
         transform: scale(.95);
     }
-    .has-navbar
+    body section.has-navbar
     {
-        background-color: #ffffff;
+        background: linear-gradient(0deg, transparent 0%, transparent 40%,  
+                             #ffffff 40%, #ffffff 100%);
     }
+    
     section.has-navbar .navbar .navlist
     {
         position: relative;
@@ -489,6 +494,7 @@ section.has-content .product-card .card-body
         align-items: center;
         margin-top: 0;
         font-size: 1rem;
+        height: calc(100%);
         padding: 0;
         transform: translateX(0);
         background-color: transparent;
@@ -496,9 +502,9 @@ section.has-content .product-card .card-body
     }
     section.has-navbar .navbar .navlist .navitem
     {
-        margin-right: 15px;
-        margin-left: 15px;
-        width: 90px;
+        margin-right: 7px;
+        margin-left: 7px;
+        width: 115px;
         border-radius: 50px;
     }
     body section.has-navbar .navbar .nav-get-started
