@@ -23,15 +23,18 @@ body
     font-size: 16px;
     overflow-x: hidden;
     text-align: center;
+    
 }
 body h1
 {
-    font-size: 3.8rem;
+    font-size: 2.4rem;
     font-weight: 700;
+    color: var(--p-dark-blue);
 }
 body h2
 {
-    font-size: 3.6rem;
+    font-size: 1.8rem;
+    color: var(--p-dark-blue);
 }
 body section .round-radius
 {
@@ -39,7 +42,7 @@ body section .round-radius
 }
 body section
 {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
 }
 body section button:focus 
 { 
@@ -62,12 +65,11 @@ body section .button-shadow::after
 }
 body section .btn-style
 {
-    height: 60px;
-    width: 220px;
+    height: 45px;
+    width: 160px;
     border: none;
     font-weight: 700;
     letter-spacing: .018rem;
-    margin-top: 20px;
 }
 body section .btn-color,
 body section .card-number
@@ -84,7 +86,7 @@ body .container
 {
     display: grid;
     height: calc(100%);
-    width: 100vw;
+    width: 100%;
     grid-template-columns: 1fr;
     grid-template-rows: .1fr .4fr .4fr .4fr .4fr .08fr .02fr;
     grid-template-areas: 
@@ -97,6 +99,27 @@ body .container
         "attribution"
     ;
     padding: 0;
+    overflow-x: hidden;
+    background-image: 
+        url(/assets/images/bg-tablet-pattern.svg),
+        url(/assets/images/bg-tablet-pattern.svg);
+        background-repeat: no-repeat, no-repeat;
+        background-position: 3rem -5.5%, 15.5rem 33.5rem;
+        background-size: 125%, 75%;
+}
+.overlay
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+.overlay.active
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(0deg, 0% rgba(0,0,0,.8), 100% rgba(0,0,0,1));
 }
 body section.has-navbar
 {
@@ -106,16 +129,26 @@ body section.has-navbar
     grid-area: nav;
     z-index: 10;
     margin-bottom: 0;
+    height: 100%;
+    max-width: 100%;
 }
 section.has-navbar .navbar 
 {
-    padding: 20px;
-    position: relative;
+    width: 100%;
+    position: fixed;
 }
 section.has-navbar .navbar .nav-logo
 {
-    margin-top: 20px;
+    visibility: hidden;
+    margin-top: 30px;
     z-index: 10;
+}
+section.has-navbar .navbar .nav-collapsible
+{
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: center;
 }
 section.has-navbar .navbar .navlist
 {
@@ -124,16 +157,16 @@ section.has-navbar .navbar .navlist
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 60px;
-    left: 0;
-    height: 500px;
-    width: 100%;
-    transform: translateX(100%);
-    padding: 45px;
+    margin-top: 34px;
+    height: 320px;
+    width: 94%;
+    transform: translateX(110%);
+    padding: 0 45px;
     background-color: var(--n-light-grey);
-    font-size: 2.2rem;
+    font-size: 1.2rem;
     font-weight: 500;
     transition: .6s ease-in-out;
+    border-radius: 4px;
 }
 section.has-navbar .navbar .navlist.active
 {
@@ -141,7 +174,7 @@ section.has-navbar .navbar .navlist.active
 }
 section.has-navbar .navbar .navlist .navitem
 {
-    margin-top: 15px;
+    margin-top: 8px;
     width: 100%;
     transition: .3s ease-in-out;
     padding: 6px 10px;
@@ -150,20 +183,14 @@ section.has-navbar .navbar .navlist .navitem:hover
 {
     background-color: var(--n-pale-red);
 }
-section.has-navbar .navbar .nav-collapsible
-{
-    display: flex;
-    flex-direction: row;
-}
 section.has-navbar .navbar #nav-toggle
 {
     position: absolute;
-    top: 32px;
+    top: 40px;
     right: 30px;
     display: flex;
     flex-direction: row;
     cursor: pointer;
-    margin-top: 20px;
 }
 .nav-collapsible div[class^="dot"]
 {
@@ -208,6 +235,7 @@ section.has-navbar .navbar #nav-toggle.active .dot-four
 body section.has-navbar .navbar .nav-get-started
 {
     visibility: hidden;
+    position: absolute;
 }
 body ul li
 {
@@ -227,16 +255,28 @@ body .has-content
     grid-area: main;
     display: flex;
     flex-direction: column-reverse;
+    max-width: 100%;
 }
 .main-right
 {
     display: flex;
     justify-content: center;
     grid-area: main-right;
+    width: 100%;
+}
+.main-right img
+{
+    object-fit: cover;
+    width: 100%;
 }
 .main-left
 {
     grid-area: main-left;
+    width: 100%;
+}
+.main-left,
+.content-left
+{
     padding: 20px;
 }
 .has-content
@@ -261,7 +301,7 @@ section.has-content .product-card
 {
     display: flex;
     flex-direction: row;
-    padding: 20px;
+    padding: 10px;
 }
 section.has-content .product-card .card-number,
 section.has-content .product-card .card-head
@@ -269,7 +309,7 @@ section.has-content .product-card .card-head
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 50px;
+    height: 40px;
 }
 section.has-content .product-card .card-head
 {
@@ -280,10 +320,10 @@ section.has-content .product-card .card-number
 {
     justify-content: center;
     padding: 0;
-    min-width: 90px;
-    max-width: 90px;
+    min-width: 80px;
+    max-width: 80px;
     height: 100%;
-    margin-right: 30px;
+    margin-right: 12px;
     font-size: 1.2rem;
     font-weight: 700;
 }
@@ -293,23 +333,25 @@ section.has-content .product-card .card-head h6
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.4rem;
+    font-size: .9rem;
     font-weight: 700;
     margin-bottom: 0;
+    color: var(--p-dark-blue);
 }
 section.has-main .main-left .below-main-text,
 section.has-content .content-left .below-main-text
 {
-    font-size: 1.8rem;
+    font-size: 1rem;
     padding: 20px;
+    color: var(--n-dark-grayish-blue);
 }
 section.has-content .product-card .card-body
 {
     padding: 1em 0;
     width: 100%;
     text-align: left;
-    font-size: 1.3rem;
-    line-height: 2.2rem;
+    font-size: .9rem;
+    line-height: 1.8rem;
     color: var(--n-dark-grayish-blue);
 }
 .has-testimonials
@@ -448,7 +490,32 @@ section.has-content .product-card .card-body
 {
     width: 50%;
 }
+@media screen and (min-width: 992px)
+{
+    body.container
+    {
+        max-width: 100%;
+    }
+}
 @media screen and (min-width: 768px)
+{
+    body.container
+    {
+        max-width: 100%;
+    }
+    section.has-navbar .navbar .nav-logo
+    {
+        visibility: visible;
+    }
+}
+@media screen and (min-width: 576px)
+{
+    body.container
+    {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 1366px)
 {
     body .container
     {
@@ -465,6 +532,17 @@ section.has-content .product-card .card-body
             "footer footer"
             "attribution attribution"
         ;
+    }
+    body section .btn-style
+    {
+        margin-top: 20px;
+    }
+    body .has-navbar,
+    body .has-main,
+    body .has-content
+    {
+        padding-left: 8%;
+        padding-right: 8%;
     }
     section.has-navbar .navbar #nav-toggle
     {
@@ -484,7 +562,10 @@ section.has-content .product-card .card-body
         background: linear-gradient(0deg, transparent 0%, transparent 40%,  
                              #ffffff 40%, #ffffff 100%);
     }
-    
+    section.has-navbar .navbar 
+    {
+        padding: 20px;
+    }
     section.has-navbar .navbar .navlist
     {
         position: relative;
@@ -510,6 +591,7 @@ section.has-content .product-card .card-body
     body section.has-navbar .navbar .nav-get-started
     {
         visibility: visible;
+        position: relative;
     }
     .has-main,
     .has-content
@@ -543,6 +625,34 @@ section.has-content .product-card .card-body
     .content-right
     {
         grid-area: content-right;
+    }
+    section.has-main .main-left,
+    section.has-content .content-left
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+    }
+    section.has-main .main-left .below-main-text,
+    section.has-content .content-left .below-main-text
+    {
+        padding: 0;
+        width: 50%;
+        margin: 25px 0;
+        color: var(--n-dark-grayish-blue);
+    }
+    body h1
+    {
+        font-size: 2.6rem;
+        font-weight: 700;
+        width: 80%;
+    }
+    body h2
+    {
+        font-size: 2rem;
+        font-weight: 700;
+        width: 60%;
     }
     section.has-content .product-card .card-head
     {
