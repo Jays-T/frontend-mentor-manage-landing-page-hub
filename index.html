@@ -19,9 +19,9 @@
   </style>
 </head>
 <body>
-<div class="container">
-  <section class="has-navbar">
-    <div class="navbar">
+<div class="grid-container">
+  <section class="has-nav-bar">
+    <div class="nav-bar">
       <div class="nav-logo">
         <img class="manage-logo" src="assets/images/logo.svg" alt="manage logo">
       </div>
@@ -34,6 +34,7 @@
             <li class="navitem">Community</li>
           </ul>
         <div id="nav-toggle">
+          <img class="mobile-logo" src="assets/images/logo-mobile.svg" alt="manage logo text">
           <div class="nav-toggle-top">
             <div class="dot-one"></div>
             <div class="dot-two"></div>
@@ -125,11 +126,11 @@
       </div>
     </div>
   </section>
-  <!-- <section class="has-testimonials has-carousel">
-    <h3>
+  <section class="has-testimonials has-carousel">
+    <h2>
       What they’ve said
-    </h3>
-    <div class="carousel">
+    </h2>
+    <div id="carousel">
       <div class="carousel-card">
         <div class="carousel-card-img circle">
           <img src="/assets/images/avatar-anisha.png" alt="portrait of Anisha Li">
@@ -146,7 +147,7 @@
           </p>
         </div>
       </div>
-      <div class="carousel-card">
+      <!-- <div class="carousel-card">
         <div class="carousel-card-img circle">
           <img src="/assets/images/avatar-ali.png" alt="portrait of Ali Bravo">
         </div>
@@ -194,79 +195,7 @@
           from anywhere. It keeps the whole team in-sync without being intrusive.”
           </p>
         </div>
-      </div>
-    </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-      <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      </ol>
-      <div class="carousel-inner">
-        <div class="carousel-item active" data-slide="0">
-          <div class="carousel-card d-block w-100">
-            <div class="carousel-card-img circle">
-              <img src="assets/images/avatar-anisha.png" alt="portrait of Anisha Li">
-            </div>
-            <div class="card-head">
-              <h6>
-                Anisha Li
-              </h6>
-            </div>
-            <div class="card-body">
-              <p>
-              “Manage has supercharged our team’s workflow. The ability to maintain 
-              visibility on larger milestones at all times keeps everyone motivated.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-slide="1">
-          <div class="carousel-card d-block w-100">
-            <div class="carousel-card-img circle">
-              <img src="assets/images/avatar-ali.png" alt="portrait of Ali Bravo">
-            </div>
-            <div class="card-head">
-              <h6>
-                Ali Bravo
-              </h6>
-            </div>
-            <div class="card-body">
-              <p>
-              “We have been able to cancel so many other subscriptions since using 
-              Manage. There is no more cross-channel confusion and everyone is much 
-              more focused.”
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item" data-slide="2">
-          <div class="carousel-card d-block w-100">
-            <div class="carousel-card-img circle">
-              <img src="assets/images/avatar-richard.png" alt="portrait of Richard Watts">
-            </div>
-            <div class="card-head">
-              <h6>
-                Richard Watts
-              </h6>
-            </div>
-            <div class="card-body">
-              <p>
-              “Manage allows us to provide structure and process. It keeps us organized 
-              and focused. I can’t stop recommending them to everyone I talk to!”
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-      </a>
+      </div> -->
     </div>
     <button class="round-radius btn-style btn-color button-shadow">Get Started</button>
   </section>
@@ -283,7 +212,8 @@
       <div class="footer-bottom">
         <div class="sign-up">
         <input class="round-radius" placeholder="Updates in your inbox…" type="email">
-        <button class="round-radius btn-style btn-color">Go</button>
+        <button class="round-radius btn-style btn-color footer-go">Go</button>
+        <p class="copyright-text-large-viewport">Copyright 2020. All Rights Reserved</p>
         </div>
         <div class="footer-links">
           <ul class="list-one">
@@ -298,25 +228,27 @@
             <li class="footer-links-item">Privacy Policy</li>
           </ul>
         </div>
-        <ul class="social-media-links">
-          <li class="social-media-links-item"><a href="https://www.facebook.com" target="_blank"><img src="assets/images/icon-facebook.svg" alt="facebook icon"></a></li>
-          <li class="social-media-links-item"><a href="https://www.youtube.com" target="_blank"><img src="assets/images/icon-youtube.svg" alt="youtube icon"></a></li>
-          <li class="social-media-links-item"><a href="https://www.twitter.com" target="_blank"><img src="assets/images/icon-twitter.svg" alt="twitter icon"></a></li>
-          <li class="social-media-links-item"><a href="https://www.pinterest.com" target="_blank"><img src="assets/images/icon-pinterest.svg" alt="pinterest icon"></a></li>
-          <li class="social-media-links-item"><a href="https://www.instagram.com" target="_blank"><img src="assets/images/icon-instagram.svg" alt="instagram icon"></a></li>
-        </ul>
-
+        <div class="social-media-links-wrap">
+          <img class="footer-logo-large-viewport" src="assets/images/logo-footer.svg" alt="manage company logo">
+            <ul class="social-media-links">
+              <li class="social-media-links-item"><a href="https://www.facebook.com" target="_blank"><img src="assets/images/icon-facebook.svg" alt="facebook icon"></a></li>
+              <li class="social-media-links-item"><a href="https://www.youtube.com" target="_blank"><img src="assets/images/icon-youtube.svg" alt="youtube icon"></a></li>
+              <li class="social-media-links-item"><a href="https://www.twitter.com" target="_blank"><img src="assets/images/icon-twitter.svg" alt="twitter icon"></a></li>
+              <li class="social-media-links-item"><a href="https://www.pinterest.com" target="_blank"><img src="assets/images/icon-pinterest.svg" alt="pinterest icon"></a></li>
+              <li class="social-media-links-item"><a href="https://www.instagram.com" target="_blank"><img src="assets/images/icon-instagram.svg" alt="instagram icon"></a></li>
+          </ul>
+        </div>
         
         <span class="copyright">
-          <img class="footer-logo" src="assets/images/logo.svg" alt="manage company logo">
-          <p>Copyright 2020. All Rights Reserved</p>
+          <img class="footer-logo" src="assets/images/logo-footer.svg" alt="manage company logo">
+          <p class="copyright-text">Copyright 2020. All Rights Reserved</p>
         </span>
       </div>
     </div>
-  </section> -->
+  </section>
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://jays-t.github.io/resume/" target="_blank">Jays - Angry Cat Design</a>.
+    Challenge by:<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"> Frontend Mentor</a>. 
+    Coded by:<a href="https://jays-t.github.io/resume/" target="_blank"> Jays - Angry Cat Design</a>.
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
