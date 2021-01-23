@@ -99,7 +99,7 @@ body .grid-container
         "attribution";
     padding: 0;
     overflow: hidden;
-    background-image: url(/assets/images/bg-tablet-pattern.svg), url(/assets/images/bg-tablet-pattern.svg);
+    background-image: url(../images/bg-tablet-pattern.svg), url(../images/bg-tablet-pattern.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: 3rem -8rem, 15.4rem 34.2rem;
     background-size: 125%, 75%;
