@@ -65,7 +65,7 @@ body  .button-shadow::after
 }
 body .btn-style
 {
-    height: 45px;
+    min-height: 45px;
     width: 160px;
     border: none;
     font-weight: 700;
@@ -104,6 +104,10 @@ body .grid-container
     background-position: 3rem -8rem, 15.4rem 34.2rem;
     background-size: 125%, 75%;
 }
+body .grid-container > section
+{
+    margin-bottom: 30px;
+}
 .overlay
 {
     position: absolute;
@@ -120,8 +124,6 @@ body .grid-container
 }
 body .has-nav-bar
 {
-    position: sticky;
-    top: 0;
     background-color: var(--n-light-grey);
     grid-area: nav;
     z-index: 10;
@@ -254,6 +256,9 @@ body .has-content
     padding-left: 2%;
     padding-right: 2%;
 }
+
+/* Main Headers */
+
 .has-main
 {
     grid-template-areas: "main-right main-left";
@@ -297,7 +302,9 @@ body .has-content
 {
     grid-area: content-right;
 }
+
 /* Product Info */
+
 .has-content .has-content-left
 {
     padding-top: 20px;
@@ -360,15 +367,175 @@ body .has-content
     line-height: 1.8rem;
     color: var(--n-dark-grayish-blue);
 }
+
+/* Carousel Testimonials */
+
 .has-testimonials
 {
     grid-area: testimonials;
     height: 100%;
 }
-.has-testimonials button
+.has-carousel
 {
-    margin-bottom: 40px;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    min-height: 620px;
+    margin: 0 auto;
 }
+.has-carousel #carousel
+{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+.has-carousel #carousel .carousel-track
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 5%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    list-style: none;
+}
+#carousel a,
+#carousel p
+{
+    color: var(--n-dark-grayish-blue);
+    text-decoration: none;
+}
+.has-carousel h2
+{
+    position: relative;
+    top: 40px;
+    font-weight: 700;
+}
+#carousel .carousel-switch-left,
+#carousel .carousel-switch-right
+{
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    align-items: center;
+    width: 50px;
+}
+.carousel-button
+{
+    height: 8px;
+    width: 6px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--n-pale-red);
+    margin: 2px 0;
+}
+.carousel-switch-left > span,
+.carousel-switch-right > span
+{
+    transition: all .3s ease;
+}
+.carousel-switch-right:hover .carousel-button-right-top,
+.carousel-switch-right:hover .carousel-button-right-bottom
+{
+    border-top: none;
+    border-bottom: none;
+    background: linear-gradient(to right, var(--n-pale-red), var(--p-bright-red));
+}
+.carousel-switch-left:hover .carousel-button-left-top,
+.carousel-switch-left:hover .carousel-button-left-bottom
+{
+    border-top: none;
+    border-bottom: none;
+    background: linear-gradient(to left, var(--n-pale-red), var(--p-bright-red));
+}
+.carousel-button-left-top,
+.carousel-button-right-bottom
+{
+    transform: skew(-40deg);
+}
+.carousel-button-left-bottom,
+.carousel-button-right-top
+{
+    transform: skew(40deg);
+}
+.carousel-button-left-top,
+.carousel-button-right-top
+{
+    border-top: 3px solid var(--p-bright-red);
+}
+.carousel-button-left-bottom,
+.carousel-button-right-bottom
+{
+    border-bottom: 3px solid var(--p-bright-red);
+}
+.carousel-button-left-top,
+.carousel-button-left-bottom
+{
+    border-left: 4px solid var(--p-bright-red);
+}
+.carousel-button-right-top,
+.carousel-button-right-bottom
+{
+    border-right: 4px solid var(--p-bright-red);
+}
+.carousel-nav
+{
+    width: 40%;
+    height: 45px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.carousel-nav .carousel-indicator
+{
+    height: 8px;
+    width: 8px;
+    border: solid 1px var(--p-bright-red);
+    border-radius: 50%;
+    background-color: var(--n-pale-red);
+}
+#carousel .carousel-card
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    max-height: 350px;
+    background: linear-gradient(0deg, var(--n-light-grey) 0%, var(--n-light-grey) 77%, transparent 77%, transparent 100%);
+    max-width: 80%;
+    margin: 0 10px;
+}
+#carousel  .carousel-card-img,
+#carousel  .card-body,
+#carousel  .card-head
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+#carousel  .carousel-card-img
+{
+    object-fit: contain;
+}
+#carousel  .carousel-card .card-body p
+{
+    width: 90%;
+}
+body .has-carousel button.carousel-get-started
+{
+    visibility: hidden;
+}
+
+/* Footer */
+
 .has-footer
 {
     display: grid;
@@ -480,62 +647,6 @@ body .has-footer .footer .footer-bottom input
     padding: 40px;
     grid-area: attribution;
 }
-/* Carousel Testimonials */
-.has-carousel
-{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-#carousel
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    max-width: 100%;
-    height: 450px;
-}
-#carousel a,
-#carousel p,
-#carousel li
-{
-    color: var(--n-dark-grayish-blue);
-    text-decoration: none;
-}
-.has-carousel h2
-{
-    font-weight: 700;
-}
-#carousel .carousel-card
-{
-    min-height: 400px;
-    background: linear-gradient(0deg, var(--n-light-grey) 0%, var(--n-light-grey) 77%, transparent 77%, transparent 100%);
-    max-width: 90%;
-}
-#carousel 
-{
-    min-height: 400px;
-}
-#carousel  .carousel-card-img,
-#carousel  .card-body,
-#carousel  .card-head
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 20px;
-}
-#carousel  .carousel-card-img
-{
-    object-fit: contain;
-}
-#carousel  .carousel-card .card-body p
-{
-    width: 90%;
-}
 @media screen and (min-width: 576px)
 {
     body.grid-container
@@ -604,7 +715,7 @@ body .has-footer .footer .footer-bottom input
         display: grid;
         height: calc(100%);
         grid-template-columns: repeat(2, minmax(10px, 1fr));
-        grid-template-rows: .2fr .4fr .4fr .4fr .4fr .3fr .1fr;
+        grid-template-rows: .2fr .2fr .3fr .4fr .3fr .3fr .05fr;
         grid-template-areas: 
             "nav nav"
             "main main"
@@ -784,6 +895,42 @@ body .has-footer .footer .footer-bottom input
     {
         background-color: transparent;
     }
+    #carousel .carousel-switch-left,
+    #carousel .carousel-switch-right
+    {
+        display: flex;
+        width: 150px;
+    }
+    #carousel .carousel-switch-left
+    {
+        align-items: flex-end;
+    }
+    #carousel .carousel-switch-right
+    {
+        align-items: flex-start;
+    }
+    .carousel-button
+    {
+        height: 18px;
+        width: 10px;
+    }
+    #carousel .carousel-card
+    {
+        max-width: 50%;
+    }
+    .carousel-nav
+    {
+        width: 10%;
+    }
+    .carousel-nav .carousel-indicator
+    {
+        height: 12px;
+        width: 12px;
+    }
+    body .has-carousel button.carousel-get-started
+    {
+        visibility: visible;
+    }
     .has-footer
     {
         margin-top: 120px;
@@ -815,7 +962,6 @@ body .has-footer .footer .footer-bottom input
     .footer-logo,
     .copyright-text
     {
-        position: absolute;
         visibility: hidden;
     }
     .footer-logo-large-viewport,
