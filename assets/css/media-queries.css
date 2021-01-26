@@ -131,6 +131,53 @@
         background-position: -3.1rem -5rem;
     }
 }
+@media screen and (min-width: 1280px)
+{
+    .has-nav-bar .nav-bar .nav-logo
+    {
+        visibility: visible;
+        margin-top: 30px;
+        margin-left: 9px;
+    }
+    .has-nav-bar .nav-bar #nav-toggle
+    {
+        visibility: hidden;
+    }
+    .has-nav-bar .nav-bar .navlist
+    {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        margin-top: 0;
+        font-size: .8rem;
+        height: calc(100%);
+        padding: 0;
+        -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+                transform: translateX(0);
+        background-color: transparent;
+        font-weight: 500;
+    }
+    .has-nav-bar .nav-bar .navlist .navitem
+    {
+        margin-right: 7px;
+        margin-left: 7px;
+        width: 115px;
+        border-radius: 50px;
+        background: #ffffff;
+    }
+}
 @media screen and (min-width: 1366px)
 {
     body .grid-container
@@ -158,12 +205,6 @@
     {
         margin-top: 20px;
     }
-    .has-nav-bar .nav-bar .nav-logo
-    {
-        visibility: visible;
-        margin-top: 30px;
-        margin-left: 9px;
-    }
     .has-nav-bar .nav-bar 
     {
         width: 96%;
@@ -178,10 +219,6 @@
     {
         padding-left: 8%;
         padding-right: 8%;
-    }
-    .has-nav-bar .nav-bar #nav-toggle
-    {
-        visibility: hidden;
     }
     body button 
     {
@@ -231,40 +268,6 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-    }
-    .has-nav-bar .nav-bar .navlist
-    {
-        position: relative;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        margin-top: 0;
-        font-size: .8rem;
-        height: calc(100%);
-        padding: 0;
-        -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-                transform: translateX(0);
-        background-color: transparent;
-        font-weight: 500;
-    }
-    .has-nav-bar .nav-bar .navlist .navitem
-    {
-        margin-right: 7px;
-        margin-left: 7px;
-        width: 115px;
-        border-radius: 50px;
-        background: #ffffff;
     }
     body .has-nav-bar .nav-bar .nav-get-started
     {
