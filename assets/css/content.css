@@ -1,17 +1,28 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* CONTENT */
 
 .has-content
 {
-    grid-template-areas: "content-left content-right";
+        grid-template-areas: "content-left content-right";
     grid-area: content;
     margin-top: 45px;
 }
 .content-left
 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: content-left;
 }
 .content-right
 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: content-right;
 }
 .has-content .has-content-left
@@ -20,16 +31,27 @@
 }
 .has-content .product-card
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     padding: 10px;
 }
 .has-content .product-card .card-number,
 .has-content .product-card .card-head
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 40px;
 }
 .has-content .product-card .card-head
@@ -39,7 +61,9 @@
 }
 .has-content .product-card .card-number
 {
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 0;
     min-width: 80px;
     max-width: 80px;
@@ -51,9 +75,15 @@
 .has-content .product-card .card-head h6
 {
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     font-size: .9rem;
     font-weight: 700;
     margin-bottom: 0;

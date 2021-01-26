@@ -1,9 +1,20 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* NAVBAR */
 
 body .has-nav-bar
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
     grid-area: nav;
     z-index: 10;
@@ -30,38 +41,62 @@ body .has-nav-bar
 }
 .has-nav-bar .nav-bar .nav-collapsible
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
-    flex-direction: row;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 .has-nav-bar .nav-bar .navlist
 {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     height: 320px;
     width: 100%;
-    transform: translateX(120%);
+    -webkit-transform: translateX(120%);
+        -ms-transform: translateX(120%);
+            transform: translateX(120%);
     margin: 34px 0;
     background-color: var(--n-light-grey);
     color: var(--n-dark-blue);
     font-size: 1.2rem;
     font-weight: 500;
+    -webkit-transition: .6s ease-in-out;
+    -o-transition: .6s ease-in-out;
     transition: .6s ease-in-out;
     border-radius: 4px;
     z-index: 10;
 }
 .has-nav-bar .nav-bar .navlist.active
 {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
 }
 .has-nav-bar .nav-bar .navlist .navitem
 {
     margin-top: 8px;
     width: 100%;
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     padding: 6px 10px;
 }
@@ -74,8 +109,13 @@ body .has-nav-bar
     position: absolute;
     top: 45%;
     right: .5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     cursor: pointer;
 }
 .mobile-logo
@@ -91,24 +131,32 @@ body .has-nav-bar
     margin: 4px;
     background-color: var(--p-bright-red);
     position: relative;
+    -webkit-transition: .6s ease-in-out;
+    -o-transition: .6s ease-in-out;
     transition: .6s ease-in-out;
 }
 .has-nav-bar .nav-bar #nav-toggle.active .dot-one
 {
     border-radius: 4px;
     width: 28px;
-    transform: rotate(38deg) translate(.1em, .38em);
+    -webkit-transform: rotate(38deg) translate(.1em, .38em);
+        -ms-transform: rotate(38deg) translate(.1em, .38em);
+            transform: rotate(38deg) translate(.1em, .38em);
 }
 .has-nav-bar .nav-bar #nav-toggle.active .dot-two
 {
     border-radius: 4px;
     width: 28px;
-    transform: rotate(-38deg) translate(.12em, -.38em);
+    -webkit-transform: rotate(-38deg) translate(.12em, -.38em);
+        -ms-transform: rotate(-38deg) translate(.12em, -.38em);
+            transform: rotate(-38deg) translate(.12em, -.38em);
 }
 .has-nav-bar .nav-bar #nav-toggle.active .dot-three,
 .has-nav-bar .nav-bar #nav-toggle.active .dot-four
 {
-    transform: translateX(-24px);
+    -webkit-transform: translateX(-24px);
+        -ms-transform: translateX(-24px);
+            transform: translateX(-24px);
     opacity: 0;
 }
 .nav-collapsible .dot-two

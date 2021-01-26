@@ -1,27 +1,48 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* MAIN */
 
 .has-main
 {
-    grid-template-areas: "main-right main-left";
+        grid-template-areas: "main-right main-left";
     grid-area: main;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
     max-width: 100%;
 }
 .main-right
 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     grid-area: main-right;
     width: 100%;
 }
 .main-right img
 {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     width: 100%;
 }
 .main-left
 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
     grid-area: main-left;
     width: 100%;
 }

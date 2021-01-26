@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* CAROUSEL + TESTIMONIALS */
 
 .has-testimonials
@@ -7,18 +14,32 @@
 }
 .has-carousel
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex; 
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
+    -webkit-box-pack: justify; 
+        -ms-flex-pack: justify; 
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-width: 100%;
     min-height: 620px;
     margin: 0 auto;
 }
 #carousel
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: 600px;
     width: 100%;
     overflow: hidden;
@@ -32,15 +53,28 @@
 .has-carousel #carousel .carousel-track
 {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     top: 5%;
     width: 100%;
     height: 100%;
     list-style: none;
+    -webkit-transition: -webkit-transform 250ms ease-in;
+    transition: -webkit-transform 250ms ease-in;
+    -o-transition: transform 250ms ease-in;
     transition: transform 250ms ease-in;
+    transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
 }
 #carousel a,
 #carousel p
@@ -57,10 +91,17 @@
 #carousel .carousel-card
 {
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     min-height: 300px;
     max-height: 350px;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--n-light-grey)), color-stop(77%, var(--n-light-grey)), color-stop(77%, transparent), to(transparent));
+    background: -o-linear-gradient(bottom, var(--n-light-grey) 0%, var(--n-light-grey) 77%, transparent 77%, transparent 100%);
     background: linear-gradient(0deg, var(--n-light-grey) 0%, var(--n-light-grey) 77%, transparent 77%, transparent 100%);
     width: 100%;
     margin: 0 10px;
@@ -69,14 +110,21 @@
 #carousel  .card-body,
 #carousel  .card-head
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding-top: 20px;
 }
 #carousel  .carousel-card-img
 {
-    object-fit: contain;
+    -o-object-fit: contain;
+       object-fit: contain;
 }
 .circle img
 {
@@ -94,10 +142,17 @@
 #carousel .carousel-change-left,
 #carousel .carousel-change-right
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     cursor: pointer;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 50px;
 }
 .carousel-button
@@ -106,13 +161,17 @@
     width: 6px;
     position: relative;
     top: 50%;
-    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
     background: var(--n-pale-red);
     margin: 2px 0;
 }
 .carousel-change-left > span,
 .carousel-change-right > span
 {
+    -webkit-transition: all .3s ease;
+    -o-transition: all .3s ease;
     transition: all .3s ease;
 }
 .carousel-change-right:hover .carousel-button-right-top,
@@ -120,6 +179,8 @@
 {
     border-top: none;
     border-bottom: none;
+    background: -webkit-gradient(linear, left top, right top, from(var(--n-pale-red)), to(var(--p-bright-red)));
+    background: -o-linear-gradient(left, var(--n-pale-red), var(--p-bright-red));
     background: linear-gradient(to right, var(--n-pale-red), var(--p-bright-red));
 }
 .carousel-change-left:hover .carousel-button-left-top,
@@ -127,17 +188,23 @@
 {
     border-top: none;
     border-bottom: none;
+    background: -webkit-gradient(linear, right top, left top, from(var(--n-pale-red)), to(var(--p-bright-red)));
+    background: -o-linear-gradient(right, var(--n-pale-red), var(--p-bright-red));
     background: linear-gradient(to left, var(--n-pale-red), var(--p-bright-red));
 }
 .carousel-button-left-top,
 .carousel-button-right-bottom
 {
-    transform: skew(-40deg);
+    -webkit-transform: skew(-40deg);
+        -ms-transform: skew(-40deg);
+            transform: skew(-40deg);
 }
 .carousel-button-left-bottom,
 .carousel-button-right-top
 {
-    transform: skew(40deg);
+    -webkit-transform: skew(40deg);
+        -ms-transform: skew(40deg);
+            transform: skew(40deg);
 }
 .carousel-button-left-top,
 .carousel-button-right-top
@@ -163,10 +230,19 @@
 {
     width: 40%;
     height: 45px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .carousel-nav .carousel-indicator
 {
@@ -175,6 +251,8 @@
     border: solid 1px var(--p-bright-red);
     border-radius: 50%;
     background-color: var(--n-pale-red);
+    -webkit-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     cursor: pointer;
 }

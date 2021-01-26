@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /* Global Classes */
 :root {
     /* P = Primary | N = Neutral */
@@ -60,7 +67,8 @@ body .button-shadow::after
     width: 90%;
     top: 8px;
     left:5%;
-    box-shadow: 0px 7px 16px var(--p-bright-red);
+    -webkit-box-shadow: 0px 7px 16px var(--p-bright-red);
+            box-shadow: 0px 7px 16px var(--p-bright-red);
 }
 body .btn-style
 {
@@ -83,12 +91,15 @@ body .inverted
 }
 body .grid-container
 {
+    display: -ms-grid;
     display: grid;
     height: calc(100%);
     width: 100%;
+    -ms-grid-columns: (minmax(10px, 1fr))[1];
     grid-template-columns: repeat(1, minmax(10px, 1fr));
+    -ms-grid-rows: .1fr .4fr .4fr .4fr .3fr .4fr .02fr;
     grid-template-rows: .1fr .4fr .4fr .4fr .3fr .4fr .02fr;
-    grid-template-areas:
+        grid-template-areas:
         "nav"
         "main"
         "content"
@@ -117,9 +128,13 @@ body .grid-container > section
     right: 0;
     bottom: 0;
     opacity: 0;
+    background: -webkit-gradient(linear, left bottom, left top, from(var(--n-dark-blue)), to(var(--n-pale-red)));
+    background: -o-linear-gradient(bottom, var(--n-dark-blue) 0%, var(--n-pale-red) 100%);
     background: linear-gradient(0deg, var(--n-dark-blue) 0%, var(--n-pale-red) 100%);
     z-index: 2;
     cursor: pointer;
+    -webkit-transition: .6s ease-in-out;
+    -o-transition: .6s ease-in-out;
     transition: .6s ease-in-out;
     pointer-events: none;
 }
@@ -142,15 +157,23 @@ body .has-content
 }
 .attribution
 {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
     height: 45px;
     grid-area: attribution;
     color: var(--n-dark-blue);
     font-size: .6rem;
     width: 100%;
     line-height: 1.2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .attribution .attr-left
 {
