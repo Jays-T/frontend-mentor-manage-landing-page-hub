@@ -596,16 +596,26 @@ body .has-carousel button.carousel-get-started
 }
 body .has-footer .footer .footer-bottom .footer-go
 {
+    position: relative;
     width: 80px;
+    background-color: var(--p-bright-red);
 }
-body .has-footer .footer .footer-bottom .footer-go::before
+/* body .has-footer .footer .footer-bottom .footer-go:hover
+{
+    opacity: .8;
+} */
+body .has-footer .footer .footer-bottom .footer-go::after
 {
     content: '';
-    background-color: var(--n-pale-red);
-    position: relative;
-    height: 98%;
-    width: 98%;
+    background-color: rgba(255, 255, 255, .15);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 50px;
     z-index: -1;
+    transition: .3s ease-in-out;
 }
 body .has-footer .footer .footer-bottom input
 {
@@ -819,7 +829,6 @@ svg:hover
     body button:hover
     {
         opacity: .8;
-        transform: scale(.95);
     }
     body .has-nav-bar
     {
