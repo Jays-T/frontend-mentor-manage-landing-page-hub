@@ -1,0 +1,32 @@
+/* MAIN */
+
+.has-main
+{
+    grid-template-areas: "main-right main-left";
+    grid-area: main;
+    display: flex;
+    flex-direction: column-reverse;
+    max-width: 100%;
+}
+.main-right
+{
+    display: flex;
+    justify-content: center;
+    grid-area: main-right;
+    width: 100%;
+}
+.main-right img
+{
+    object-fit: cover;
+    width: 100%;
+}
+.main-left
+{
+    grid-area: main-left;
+    width: 100%;
+}
+.main-left,
+.content-left
+{
+    padding: 20px;
+}

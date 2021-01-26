@@ -1,0 +1,129 @@
+/* NAVBAR */
+
+body .has-nav-bar
+{
+
+    grid-area: nav;
+    z-index: 10;
+    margin-bottom: 0;
+    height: 100%;
+    max-width: 100%;
+}
+.has-nav-bar .nav-bar 
+{
+    width: 96%;
+    position: fixed;
+    background-color: var(--n-light-grey);
+    background-image: url(../images/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: -1.95rem -5rem;
+    background-size: 141%;
+    border-radius: 0 0 4px 4px;
+}
+.has-nav-bar .nav-bar .nav-logo
+{
+    visibility: hidden;
+    margin-top: 45px;
+    z-index: 10;
+}
+.has-nav-bar .nav-bar .nav-collapsible
+{
+    display: flex;
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+.has-nav-bar .nav-bar .navlist
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 34px;
+    height: 320px;
+    width: 94%;
+    transform: translateX(120%);
+    padding: 0 45px;
+    background-color: var(--n-light-grey);
+    color: var(--n-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 500;
+    transition: .6s ease-in-out;
+    border-radius: 4px;
+    z-index: 10;
+}
+.has-nav-bar .nav-bar .navlist.active
+{
+    transform: translateX(0);
+}
+.has-nav-bar .nav-bar .navlist .navitem
+{
+    margin-top: 8px;
+    width: 100%;
+    transition: .3s ease-in-out;
+    padding: 6px 10px;
+}
+.has-nav-bar .nav-bar .navlist .navitem:hover
+{
+    color: var(--n-dark-grayish-blue);
+}
+.has-nav-bar .nav-bar #nav-toggle
+{
+    position: absolute;
+    top: 45%;
+    right: .5rem;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.mobile-logo
+{
+    margin-top: 7px;
+    margin-right: 12px;
+}
+.nav-collapsible div[class^="dot"]
+{
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: var(--p-bright-red);
+    position: relative;
+    transition: .6s ease-in-out;
+}
+.has-nav-bar .nav-bar #nav-toggle.active .dot-one
+{
+    border-radius: 4px;
+    width: 28px;
+    transform: rotate(38deg) translate(.1em, .38em);
+}
+.has-nav-bar .nav-bar #nav-toggle.active .dot-two
+{
+    border-radius: 4px;
+    width: 28px;
+    transform: rotate(-38deg) translate(.12em, -.38em);
+}
+.has-nav-bar .nav-bar #nav-toggle.active .dot-three,
+.has-nav-bar .nav-bar #nav-toggle.active .dot-four
+{
+    transform: translateX(-24px);
+    opacity: 0;
+}
+.nav-collapsible .dot-two
+{
+    opacity: .9;
+}
+.nav-collapsible .dot-three
+{
+    opacity: .7;
+}
+.nav-collapsible .dot-four
+{
+    opacity: .4;
+}
+body .has-nav-bar .nav-bar .nav-get-started
+{
+    visibility: hidden;
+    position: absolute;
+}
