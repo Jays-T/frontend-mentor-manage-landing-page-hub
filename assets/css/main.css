@@ -25,8 +25,3 @@
     grid-area: main-left;
     width: 100%;
 }
-.main-left,
-.content-left
-{
-    padding: 20px;
-}

@@ -8,7 +8,7 @@
     }
     .has-nav-bar .nav-bar 
     {
-        background-position: -3rem -5rem;
+        background-position: -1.82rem -5rem;
     }
     .has-nav-bar .nav-bar #nav-toggle
     {
@@ -28,7 +28,7 @@
     }
     .has-nav-bar .nav-bar 
     {
-        background-position: -4rem -5rem;
+        background-position: -2.35rem -5rem;
     }
     .has-nav-bar .nav-bar #nav-toggle
     {
@@ -88,7 +88,7 @@
     }
     .has-nav-bar .nav-bar 
     {
-        background-position: -4.4rem -5rem;
+        background-position: -2.34rem -5rem;
     }
     #carousel .carousel-track-container
     {
@@ -100,12 +100,18 @@
         background-position: 0rem 1.8rem;
         background-size: 5%;
     }
+    .list-one,
+    .list-two
+    {
+        margin-left: 42%;
+
+    }
 }
 @media screen and (min-width: 1024px)
 {
     .has-nav-bar .nav-bar 
     {
-        background-position: -5.3rem -5rem;
+        background-position: -3.1rem -5rem;
     }
 }
 @media screen and (min-width: 1366px)
@@ -136,6 +142,7 @@
     {
         visibility: visible;
         margin-top: 30px;
+        margin-left: 9px;
     }
     .has-nav-bar .nav-bar 
     {
@@ -173,7 +180,6 @@
         z-index: 10;
         margin-bottom: 0;
         height: 100%;
-        min-width: 100%;
     }
     body .has-nav-bar .nav-bar 
     {
@@ -297,6 +303,11 @@
         font-weight: 700;
         width: 60%;
     }
+    .main-left,
+    .content-left
+    {
+        padding: 20px;
+    }
     .has-content .product-card .card-head
     {
         background-color: transparent;
@@ -368,6 +379,12 @@
         "social-media-links-wrap footer-links sign-up";
         max-height: 320px;
         padding-top: 40px;
+    }
+    .list-one,
+    .list-two
+    {
+        margin-left: 25%;
+
     }
     .footer-logo,
     .copyright-text
@@ -454,9 +471,13 @@
         background-position: 78rem -12rem, -20rem 60rem;
         background-size: 40%, 40%;
     }
+    .has-nav-bar .nav-bar .nav-logo
+    {
+        margin-left: 7px;
+    }
     body .has-nav-bar .nav-bar 
     {
-        max-width: 82.1%;
+        max-width: 74.6%;
     }
     #carousel
     {
@@ -466,5 +487,21 @@
     {
         background-position: 12.5rem -16rem;
         background-size:110%;
+    }
+    .footer-bottom .sign-up
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 50px;
+    }
+    body .has-nav-bar, 
+    body .has-main, 
+    body .has-content,
+    body .has-footer .footer-top, 
+    body .has-footer .footer-bottom
+    {
+        padding-left: 12%;
+        padding-right: 12%;
     }
 }

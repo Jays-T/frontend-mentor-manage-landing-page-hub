@@ -23,7 +23,6 @@ body
     font-size: 16px;
     overflow-x: hidden;
     text-align: center;
-    
 }
 body h1
 {
@@ -36,23 +35,23 @@ body h2
     font-size: 1.8rem;
     color: var(--p-dark-blue);
 }
-body  .round-radius
+body .round-radius
 {
     border-radius: 50px;
 }
-body 
-{
-    margin-bottom: 80px;
-}
-body  button:focus 
+body button:focus 
 { 
     outline: none; 
 }
-body  .button-shadow
+body button
+{
+    cursor: pointer;
+}
+body .button-shadow
 {
     position: relative;
 }
-body  .button-shadow::after
+body .button-shadow::after
 {
     content: '';
     position: absolute;
@@ -86,9 +85,9 @@ body .grid-container
 {
     display: grid;
     height: calc(100%);
-    max-width: 100;
+    width: 100%;
     grid-template-columns: repeat(1, minmax(10px, 1fr));
-    grid-template-rows: .1fr .4fr .4fr .4fr .4fr .3fr .08fr;
+    grid-template-rows: .1fr .4fr .4fr .4fr .3fr .4fr .02fr;
     grid-template-areas:
         "nav"
         "main"
@@ -143,10 +142,21 @@ body .has-content
 }
 .attribution
 {
-    height: 80px;
-    padding: 40px;
+    height: 45px;
     grid-area: attribution;
     color: var(--n-dark-blue);
     font-size: .6rem;
     width: 100%;
+    line-height: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.attribution .attr-left
+{
+    margin-right: 4px;
+}
+.attribution .attr-right
+{
+    margin-left: 4px;
 }

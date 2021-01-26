@@ -64,10 +64,14 @@ body .has-footer .footer .footer-bottom .footer-go::after
     z-index: -1;
     transition: .3s ease-in-out;
 }
+body .has-footer .footer .footer-bottom form
+{
+    max-height: 45px;
+}
 body .has-footer .footer .footer-bottom input
 {
-    height: 45px;
-    padding: 18px;
+    max-height: 45px;
+    padding: 15px;
     outline: none;
     border: none;
 }
@@ -102,12 +106,12 @@ svg:hover
 }
 .list-one
 {
-    margin-left: 25%;
+    margin-left: 37%;
     grid-area: list-one;
 }
 .list-two
 {
-    margin-left: 25%;
+    margin-left: 37%;
     grid-area: list-two;
 }
 .footer-links ul

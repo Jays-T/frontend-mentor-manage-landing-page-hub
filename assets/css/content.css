@@ -4,6 +4,7 @@
 {
     grid-template-areas: "content-left content-right";
     grid-area: content;
+    margin-top: 45px;
 }
 .content-left
 {
