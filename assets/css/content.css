@@ -100,9 +100,10 @@
 .has-content .product-card .card-body
 {
     padding: 1em 0;
-    width: 100%;
+    margin-left: 92px;
+    width: 84%;
     text-align: left;
-    font-size: .9rem;
+    font-size: 1.1rem;
     line-height: 1.8rem;
     color: var(--n-dark-grayish-blue);
 }
