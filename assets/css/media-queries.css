@@ -646,6 +646,15 @@
     {
         max-width: 74.6%;
     }
+    .main-left h1
+    {
+        width: 75%;
+    }
+    .has-content .content-left .below-main-text,
+    .has-main .main-left .below-main-text
+    {
+        width: 50%;
+    }
     .has-content .product-card .card-body
     {
         width: 88%;
