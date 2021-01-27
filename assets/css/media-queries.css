@@ -388,6 +388,11 @@
     {
         background-color: transparent;
     }
+    .has-content .product-card .card-body
+    {
+        margin-left: 92px;
+        width: 84%;
+    }
     #carousel .carousel-change-left,
     #carousel .carousel-change-right
     {
@@ -658,7 +663,6 @@
     .has-content .product-card .card-body
     {
         width: 88%;
-
     }
     #carousel
     {
