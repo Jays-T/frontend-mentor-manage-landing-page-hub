@@ -164,14 +164,14 @@ svg:hover
 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    margin-left: 37%;
+    margin-left: 25%;
     grid-area: list-one;
 }
 .list-two
 {
     -ms-grid-row: 1;
     -ms-grid-column: 2;
-    margin-left: 37%;
+    margin-left: 25%;
     grid-area: list-two;
 }
 .footer-links ul

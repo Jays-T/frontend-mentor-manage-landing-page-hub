@@ -132,6 +132,10 @@ body .grid-container > section
 {
     margin-bottom: 30px;
 }
+body .grid-container .has-footer
+{
+    margin-bottom: 0;
+}
 #overlay 
 {
     position: fixed;
@@ -173,9 +177,10 @@ body .has-content
 {
     -ms-grid-row: 7;
     -ms-grid-column: 1;
-    height: 45px;
+    height: 55px;
     grid-area: attribution;
-    color: var(--n-dark-blue);
+    color: var(--n-dark-grayish-blue);
+    background-color: var(--n-dark-blue);
     font-size: .6rem;
     width: 100%;
     line-height: 1.2rem;
@@ -188,6 +193,16 @@ body .has-content
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+}
+.attribution a
+{
+    text-decoration: none;
+    color: var(--n-dark-grayish-blue);
+    transition: .3s ease-in-out;
+}
+.attribution a:hover
+{
+    color: var(--p-bright-red);
 }
 .attribution .attr-left
 {

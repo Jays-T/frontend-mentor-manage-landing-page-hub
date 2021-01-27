@@ -25,6 +25,11 @@
     {
         width: 80%;
     }
+    .list-one,
+    .list-two
+    {
+        margin-left: 37%;
+    }
 }
 @media screen and (min-width: 768px)
 {
@@ -121,7 +126,6 @@
     .list-two
     {
         margin-left: 42%;
-
     }
 }
 @media screen and (min-width: 1024px)
