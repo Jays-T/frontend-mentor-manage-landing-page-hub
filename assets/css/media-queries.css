@@ -147,6 +147,11 @@
         margin-top: 30px;
         margin-left: 9px;
     }
+    body .has-nav-bar .nav-bar .nav-get-started
+    {
+        visibility: visible;
+        position: relative;
+    }
     .has-nav-bar .nav-bar #nav-toggle
     {
         visibility: hidden;
@@ -273,11 +278,6 @@
         -webkit-box-pack: center;
             -ms-flex-pack: center;
                 justify-content: center;
-    }
-    body .has-nav-bar .nav-bar .nav-get-started
-    {
-        visibility: visible;
-        position: relative;
     }
     .has-main,
     .has-content
