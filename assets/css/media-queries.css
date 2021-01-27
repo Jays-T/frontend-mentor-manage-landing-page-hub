@@ -391,7 +391,9 @@
     .has-content .product-card .card-body
     {
         margin-left: 92px;
-        width: 84%;
+        width: 82%;
+        text-align: left;
+        font-size: 1rem;
     }
     #carousel .carousel-change-left,
     #carousel .carousel-change-right
@@ -662,7 +664,7 @@
     }
     .has-content .product-card .card-body
     {
-        width: 88%;
+        width: 70%;
     }
     #carousel
     {
